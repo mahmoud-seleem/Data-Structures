@@ -103,6 +103,13 @@ public class CDLinkedList<E>{
             trailer.setPrev(temp);
         }
     }
+    public void rotateV2(){
+        if (size() <= 1);
+        else {
+            E element = this.removeFirst();
+            this.addLast(element);
+        }
+    }
     @Override
     public String toString() {
         StringBuilder output = new StringBuilder();

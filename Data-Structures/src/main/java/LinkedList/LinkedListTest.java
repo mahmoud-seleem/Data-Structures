@@ -7,14 +7,13 @@ public class LinkedListTest {
         strings.addLast("mohamed");
         strings.addLast("sha7at");
         strings.addLast("seleem");
-        System.out.println(strings);
-//        strings.rotate();
-  //      System.out.println(strings);
-        strings.removeLast();
-        System.out.println(strings);
-        strings.removeLast();
-        System.out.println(strings);
-        strings.removeLast();
-        System.out.println(strings);
+        long start1 = System.nanoTime();
+        strings.rotate();
+        long end1 = System.nanoTime();
+        System.out.println(end1 - start1);
+        long start2 = System.nanoTime();
+        strings.rotateV2();
+        long end2 = System.nanoTime();
+        System.out.println(end2 - start2);
     }
 }
