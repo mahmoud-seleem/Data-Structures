@@ -11,9 +11,11 @@ public class LinkedListTest {
         strings.rotate();
         long end1 = System.nanoTime();
         System.out.println(end1 - start1);
+        System.out.println(strings);
         long start2 = System.nanoTime();
         strings.rotateV2();
         long end2 = System.nanoTime();
         System.out.println(end2 - start2);
+        System.out.println(strings);
     }
 }
