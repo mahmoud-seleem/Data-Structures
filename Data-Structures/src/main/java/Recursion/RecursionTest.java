@@ -6,7 +6,7 @@ import java.util.List;
 
 public class RecursionTest {
     public static void main(String[] args) {
-        printAllPer("",(List<String>) Arrays.asList("a","b","c"));
+        printAllPer("",Arrays.asList("a","b","c","d","e"));
     }
     public static void printAllPer(String s ,List<String> array){
         if (array.size() > 1) {
