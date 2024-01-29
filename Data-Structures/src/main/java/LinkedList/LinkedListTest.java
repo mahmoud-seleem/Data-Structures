@@ -8,13 +8,13 @@ public class LinkedListTest {
         strings.addLast("sha7at");
         strings.addLast("seleem");
         System.out.println(strings);
-        strings.rotate();
+//        strings.rotate();
+  //      System.out.println(strings);
+        strings.removeLast();
         System.out.println(strings);
-        strings.rotate();
+        strings.removeLast();
         System.out.println(strings);
-        strings.rotate();
-        System.out.println(strings);
-        strings.rotate();
+        strings.removeLast();
         System.out.println(strings);
     }
 }
