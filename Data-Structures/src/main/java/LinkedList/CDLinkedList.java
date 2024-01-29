@@ -114,7 +114,7 @@ public class CDLinkedList<E>{
             cur = cur.getNext();
         }
         output.deleteCharAt(output.length() - 1);
-        output.deleteCharAt(output.length() -2);
+        output.deleteCharAt(output.length() - 1);
         output.append("]");
         return output.toString();
     }
