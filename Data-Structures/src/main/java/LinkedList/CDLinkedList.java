@@ -1,6 +1,10 @@
 package LinkedList;
 
-public class CDLinkedList<E> {
+import java.util.Iterator;
+
+public class CDLinkedList<E>{
+
+
     private class Node<E>{
         private E element;
         private Node<E> next;
@@ -72,6 +76,7 @@ public class CDLinkedList<E> {
         node.setPrev(null);
         node.setNext(null);
         node.setElement(null);
+        size-- ;
         return temp;
     }
     public void addFirst(E element){
@@ -80,5 +85,37 @@ public class CDLinkedList<E> {
     public void addLast(E element){
         addBetween(element,trailer,trailer.getPrev());
     }
-    
+    public E removeFirst(){
+        return (isEmpty()) ? null : removeNode(header.getNext());
+    }
+    public E removeLast(){
+        return (isEmpty()) ? null: removeNode(trailer.getPrev());
+    }
+    public void rotate(){
+        if (size() <= 1);
+        else {
+            Node<E> temp = header.getNext();
+            header.setNext(temp.getNext());
+            temp.getNext().setPrev(header);
+            temp.setNext(trailer);
+            temp.setPrev(trailer.getPrev());
+            trailer.getPrev().setNext(temp);
+            trailer.setPrev(temp);
+        }
+    }
+    @Override
+    public String toString() {
+        StringBuilder output = new StringBuilder();
+        output.append("[ ");
+        Node<E> cur = header;
+        for (int i = 0; i < size(); i++) {
+            output.append(cur.getNext().getElement());
+            output.append(" , ");
+            cur = cur.getNext();
+        }
+        output.deleteCharAt(output.length() - 1);
+        output.deleteCharAt(output.length() -2);
+        output.append("]");
+        return output.toString();
+    }
 }
