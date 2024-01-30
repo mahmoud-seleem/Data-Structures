@@ -10,7 +10,6 @@ public class ArrayStack<E> implements Stack<E>{
     public ArrayStack() {
         this(DEFAULT_CAPACITY);
     }
-    @SuppressWarnings("unchecked")
     public ArrayStack(int capacity) {
         this.elements = (E[]) new Object[capacity];
     }
@@ -60,5 +59,14 @@ public class ArrayStack<E> implements Stack<E>{
     @Override
     public E top() {
         return (isEmpty()) ? null : elements[topIndex];
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder result = new StringBuilder("");
+        for (int i = topIndex; i >= 0 ; i--){
+            result.append(elements[i]+"\n");
+        }
+        return result.toString();
     }
 }
