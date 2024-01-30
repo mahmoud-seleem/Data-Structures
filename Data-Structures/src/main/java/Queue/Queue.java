@@ -4,7 +4,7 @@ public interface Queue<E> {
     int size();
     boolean isEmpty();
     E first();
-    void Enqueue(E element);
+    void enqueue(E element);
     E dequeue();
 
 }

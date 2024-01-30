@@ -27,7 +27,7 @@ public class ArrayQueue <E> implements Queue<E>{
     }
 
     @Override
-    public void Enqueue(E element) {
+    public void enqueue(E element) {
         if (size == elements.length){
             // queue is full and should throw exception
         }
@@ -53,7 +53,7 @@ public class ArrayQueue <E> implements Queue<E>{
     @Override
     public String toString() {
         StringBuilder result = new StringBuilder("");
-        for (int i = head , j = 0 ;j < size ; j ++ ,i = (i + 1) % elements.length){
+        for (int i = head ;i != ((head+size) % elements.length);i = (i + 1) % elements.length){
                 result.append(elements[i] + "\n");
         }
         return result.toString();
