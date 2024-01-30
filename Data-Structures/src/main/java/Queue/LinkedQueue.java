@@ -5,6 +5,11 @@ import Stack.LinkedStack;
 
 public class LinkedQueue<E> implements Queue<E>{
     private final CDLinkedList<E> elements;
+
+    public CDLinkedList<E> getElements() {
+        return elements;
+    }
+
     public LinkedQueue(){
         elements = new CDLinkedList<>();
     }
