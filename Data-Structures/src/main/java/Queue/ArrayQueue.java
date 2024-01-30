@@ -58,4 +58,11 @@ public class ArrayQueue <E> implements Queue<E>{
         }
         return result.toString();
     }
+    public void printArrayQueueRepresentation(){
+        System.out.println("---------");
+        for(E e: elements){
+            System.out.println(e);
+        }
+        System.out.println("---------");
+    }
 }
