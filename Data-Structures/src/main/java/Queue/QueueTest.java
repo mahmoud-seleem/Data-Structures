@@ -2,7 +2,7 @@ package Queue;
 
 public class QueueTest {
     public static void main(String[] args) {
-        ArrayQueue<Integer> queue = new ArrayQueue<Integer>(8);
+        LinkedQueue<Integer> queue = new LinkedQueue<Integer>();
         queue.enqueue(10);
         queue.enqueue(5);
         queue.enqueue(11);
@@ -20,6 +20,7 @@ public class QueueTest {
         queue.enqueue(55);
         queue.enqueue(56);
         System.out.println(queue);
-        queue.printArrayQueueRepresentation();
+        queue.dequeue();
+        System.out.println(queue);
     }
 }
